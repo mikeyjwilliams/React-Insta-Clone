@@ -3,7 +3,14 @@ import React from 'react';
 import dummyData from './dummy-data';
 import './App.css';
 
-function App() {
+
+
+class App extends React.Component {
+  constructor(props) {
+    this.state.tweets = dummyData
+  }
+
+render() {
   console.log(dummyData);
   return (
     <div className="ig-layout">
@@ -11,6 +18,9 @@ function App() {
     </div>
   );
 }
+
+  
+
 
 export default App;
 
