@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   console.log(dummyData);
   return (
-    <div>
+    <div className="ig-layout">
       
     </div>
   );
