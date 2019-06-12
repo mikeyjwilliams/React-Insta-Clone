@@ -1,7 +1,7 @@
 import React from 'react';
 
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/Postcontainer';
+import PostContainer from '../components/PostContainer/Postcontainer';
 import './App.css';
 
 const testData = [
