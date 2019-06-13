@@ -2,10 +2,20 @@ import React from 'react';
 import './PostContainer.css';
 
 const PostContainer = props => {
-    <div>
-        
+    return (
+    <div className="ig-post">
+        <div className="ig-header">
+           <img className="ig-post-thumbnail" src={props.igData.thumbnailUrl} alt={props.igData.username} />
+           <h2 className="ig-post-username">{props.igData.username}</h2>
+        </div>
+        <div className="ig-photo">
+            <img className="ig-photo" src={props.igData.imageUrl} />
+        </div>
+        <div className=""></div>
     </div>
+    );
 };
+
 export default PostContainer;
 
 //1. import dummy data
