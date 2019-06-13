@@ -1,5 +1,11 @@
 import React from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import './PostContainer.css';
+
+const igHeart = <FontAwesomeIcon size="2x" icon={faHeart} />;
 
 const PostContainer = props => {
     return (
@@ -11,7 +17,13 @@ const PostContainer = props => {
         <div className="ig-photo">
             <img className="ig-photo" src={props.igData.imageUrl} />
         </div>
-        <div className=""></div>
+        <div className="ig-interact-section">
+            <div className="ig-interaction">
+                <div className="far ig-heart">
+                    {igHeart}
+                </div>
+            </div>
+        </div>
     </div>
     );
 };
