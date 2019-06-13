@@ -39,11 +39,11 @@ const PostContainer = props => {
 PostContainer.prototypes = {
     igData: PropTypes.shape({
         id: PropTypes.string,
-        username: PropTypes.string.isRequired,
-        thumbnailUrl: PropTypes.string.isRequired,
-        imageUrl: PropTypes.string.isRequired,
-        likes: PropTypes.number.isRequired,
-        comments: PropTypes.arrayOf(PropTypes.object.isRequired)
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        comments: PropTypes.arrayOf(PropTypes.object)
     })
 };
 
