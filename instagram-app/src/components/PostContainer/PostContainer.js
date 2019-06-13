@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CommentContainer from '../CommentSection/CommentContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 import './PostContainer.css';
 
@@ -30,6 +30,9 @@ const PostContainer = props => {
             </div>
             <div className="ig-likes">
                 {props.igData.likes} likes
+            </div>
+            <div className="ig-comments">
+               <CommentContainer igData={props.igData} />
             </div>
         </div>
     </div>
