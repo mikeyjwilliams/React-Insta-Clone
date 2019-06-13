@@ -1,0 +1,20 @@
+
+.ig-post {
+    width: 640px;
+    border: 1px solid slategray;
+}
+
+
+.ig-header {
+    display: flex;
+    align-items: center;
+}
+
+.ig-post-thumbnail {
+    border-radius: 50%;
+    width: 8%;
+}
+
+.ig-post-username {
+    margin-left: 15px;
+}
