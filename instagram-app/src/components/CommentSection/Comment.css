@@ -6,3 +6,15 @@
 .username {
     margin-right: 10px;
 }
+
+.new-comment {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid slategray;
+    padding-top: 25px;
+}
+
+.add-comment {
+    width: 90%;
+    height: 25px;
+}
