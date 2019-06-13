@@ -1,7 +1,9 @@
 import React from 'react';
 
-import dummyData from './dummy-data';
-import PostContainer from '../components/PostContainer/Postcontainer';
+
+// import dummyData from './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar';
+// import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 
 const testData = [
@@ -36,21 +38,16 @@ const testData = [
   }
 ]
 
-function App() {
- return ( 
-    console.log(dummyData);
+function App() { 
     return (
       <div className="ig-layout">
-        { this.testData.map( (igData) => {
-            <PostContainer
-              key={igData.id}
-              instagramData={igData}
-            />
-          })
-        }
+        <SearchBar />
+        
       </div>
     );
 }
+
+
 export default App;
 
 //1. import dummy data
