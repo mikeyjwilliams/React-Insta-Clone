@@ -1,11 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 import './PostContainer.css';
 
 const igHeart = <FontAwesomeIcon size="2x" icon={faHeart} />;
+const igComment = <FontAwesomeIcon size="2x" icon={faComment} />;
 
 const PostContainer = props => {
     return (
@@ -15,17 +17,34 @@ const PostContainer = props => {
            <h2 className="ig-post-username">{props.igData.username}</h2>
         </div>
         <div className="ig-photo">
-            <img className="ig-photo" src={props.igData.imageUrl} />
+            <img className="ig-photo" src={props.igData.imageUrl} alt=""/>
         </div>
         <div className="ig-interact-section">
             <div className="ig-interaction">
                 <div className="far ig-heart">
                     {igHeart}
                 </div>
+                <div className="far ig-comment">
+                    {igComment}
+                </div>
+            </div>
+            <div className="ig-likes">
+                {props.igData.likes} likes
             </div>
         </div>
     </div>
     );
+};
+
+PostContainer.prototypes = {
+    igData: PropTypes.shape({
+        id: PropTypes.string,
+        username: PropTypes.string.isRequired,
+        thumbnailUrl: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired,
+        comments: PropTypes.arrayOf(PropTypes.object.isRequired)
+    })
 };
 
 export default PostContainer;
