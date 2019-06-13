@@ -33,6 +33,7 @@ const PostContainer = props => {
             </div>
             <div className="ig-comments">
                <CommentContainer igData={props.igData} />
+               
             </div>
         </div>
     </div>
