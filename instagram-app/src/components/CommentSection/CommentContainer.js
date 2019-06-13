@@ -2,6 +2,7 @@ import React from 'react';
 
 import Comment from './Comment';
 import './Comment.css';
+import NewComment from './NewComment';
 
 const CommentContainer = props => {
     return (
@@ -12,6 +13,7 @@ const CommentContainer = props => {
                         comment={comment}
                     />
                 })}
+                <NewComment />
         </div>
     );
 }
