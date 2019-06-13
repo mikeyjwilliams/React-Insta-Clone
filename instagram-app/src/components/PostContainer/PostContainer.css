@@ -1,4 +1,18 @@
 
+.ig-interact-section {
+    margin: 5px;
+    padding: 10px 10px 5px 10px;
+}
+
+.ig-interaction {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.ig-heart {
+    margin-right: 10px;
+}
+
 .ig-post {
     width: 640px;
     border: 1px solid slategray;
