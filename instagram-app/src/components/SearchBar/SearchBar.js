@@ -5,10 +5,10 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {  faCompass, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 import './SearchBar.css';
 
-const instagramIcon = <FontAwesomeIcon icon={faInstagram} />
-const compassIcon = <FontAwesomeIcon icon={faCompass} />
-const heartIcon = <FontAwesomeIcon icon={faHeart} />
-const userIcon = <FontAwesomeIcon icon={faUser} />
+const instagramIcon = <FontAwesomeIcon icon={faInstagram} size="3x"/>
+const compassIcon = <FontAwesomeIcon icon={faCompass} size="2x"/>
+const heartIcon = <FontAwesomeIcon icon={faHeart} size="2x" />
+const userIcon = <FontAwesomeIcon icon={faUser} size="2x" />
 
 const SearchBar = props => {
     return (
