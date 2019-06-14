@@ -23,7 +23,7 @@ const SearchBar = props => {
                 <input
                     type="text"
                     placeholder="Search..."
-                    className="searchbar"
+                    className="input-search"
                 />
             <div className="user-icons">
                 <div className="compass-icon icon">
