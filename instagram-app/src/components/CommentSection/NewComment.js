@@ -9,11 +9,14 @@ const ellipsis = <FontAwesomeIcon icon={faEllipsisH} size="2x" />;
 const NewComment = props => {
   return (
     <div className="new-comment">
-      <input
-        type="text"
-        placeholder="Add a comment..."
-        className="add-comment"
-      />
+      <form>
+        <input
+          type="text"
+          placeholder="Add a comment..."
+          className="add-comment"
+        />
+      </form>
+      
       <div>{ellipsis}</div>
     </div>
   );
