@@ -16,6 +16,11 @@
     align-items: center;
 }
 
+.home-icon-break {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
 .input-search {
     width: 35%;
     height: 25px;
