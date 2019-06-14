@@ -9,6 +9,10 @@
   margin-left: 1.5rem;
 }
 
+.instagram-logo {
+  font-family: 'Lobster', cursive;
+}
+
 .home-icons {
   display: flex;
   flex-direction: row;
