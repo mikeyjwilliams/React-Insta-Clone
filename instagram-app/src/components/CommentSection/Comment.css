@@ -1,16 +1,8 @@
-.user-comments {
-    display: flex;
-    align-items: center;
-}
-
-.username {
-    margin-right: 10px;
-}
-
+/************** NewComment.js ***************/
 .new-comment {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid slategray;
+    border-top: 1px solid rgb(235, 235, 235);
     padding-top: 25px;
 }
 
@@ -18,4 +10,23 @@
     width: 90%;
     height: 25px;
     border: none;
+}
+
+/*********** Comment.js ****************/
+.user-comments {
+    display: flex;
+    align-items: baseline;
+}
+.username {
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom:5px;
+    padding: 5px 0 5px;
+}
+
+
+.comment {
+    margin-top: 0;
+    margin-bottom: 0;
+
 }
