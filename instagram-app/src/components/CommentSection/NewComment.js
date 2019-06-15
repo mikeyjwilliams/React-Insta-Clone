@@ -6,16 +6,35 @@ import './Comment.css';
 
 const ellipsis = <FontAwesomeIcon icon={faEllipsisH} size="2x" />;
 
-const NewComment = props => {
-  return (
-    <div className="new-comment">
-      <input
-        type="text"
-        placeholder="Add a comment..."
-        className="add-comment"
-      />
-      <div>{ellipsis}</div>
-    </div>
-  );
+const eventHandler = e => {
+  e.preventDefault();
+
+}
+
+const textEvent = e => {
+  console.log(e.target.value);
+}
+
+class NewComment extends React.Component {
+  constructor() {
+    super();
+    this.state ={};
+  }
+  render() {
+    return (
+      <div className="new-comment">
+        <form onSubmit={eventHandler}>
+          <input
+            type="text"
+            placeholder="Add a comment..."
+            className="add-comment"
+            onChange={textEvent}
+            
+          />
+        </form>
+        <div>{ellipsis}</div>
+      </div>
+    );
+  }
 };
 export default NewComment;
