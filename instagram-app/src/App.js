@@ -20,10 +20,7 @@ class App extends React.Component {
         {this.state.instagramData.map(igData => {
           return <PostContainer 
             key={igData.id} 
-            igData={igData}
-            changeSubmit={this.changeSubmit}
-            commentSubmit={this.commentSubmit}
-            commentValue={this.commentValue} 
+            igData={igData} 
         />;
         })}
       </div>
