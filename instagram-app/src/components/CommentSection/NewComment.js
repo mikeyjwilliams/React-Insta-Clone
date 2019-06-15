@@ -5,31 +5,41 @@ import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import './Comment.css';
 
 const ellipsis = <FontAwesomeIcon icon={faEllipsisH} size="2x" />;
+class NewComment extends React.Component {
+  constructor() {
+    super();
+    this.state ={
+      id: 4,
+      names: "Developer",
+      text: '',
+      userComments: []      
+    };
+  }
 
-const eventHandler = e => {
+ 
+eventHandler = e => {
   e.preventDefault();
 
 }
 
-const textEvent = e => {
+textEvent = e => {
+  this.setState({
+    text: e.target.value
+  })
   console.log(e.target.value);
-}
+} 
 
-class NewComment extends React.Component {
-  constructor() {
-    super();
-    this.state ={};
-  }
+
   render() {
     return (
       <div className="new-comment">
-        <form onSubmit={eventHandler}>
+        <form onSubmit={this.eventHandler}>
           <input
             type="text"
             placeholder="Add a comment..."
             className="add-comment"
-            onChange={textEvent}
-            
+            onChange={this.textEvent}
+            value={this.state.text}
           />
         </form>
         <div>{ellipsis}</div>
