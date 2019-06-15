@@ -5,33 +5,7 @@ import './Comment.css';
 import NewComment from './NewComment'; 
 
 
-
-class CommentContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comments: props.igData.comments,
-      comment: ''
-    }
-  }
-
-  
-
-  commentSubmit = e => {
-    e.preventDefault();
-    const text = e.target.value;
-    console.log(text);
-  }
-  
-  commentValue = e => {
-    this.setState({
-      text: e.target.value
-    })
-    console.log(e.target.value);
-  }
-
-  
-  render() {
+const  CommentContainer = props => {
     return (
       <div>
         {this.props.igData.comments.map(comment => {
@@ -43,8 +17,6 @@ class CommentContainer extends React.Component {
           commentValue={this.props.commentvalue}
         />
       </div> 
-    );
-  }
-  
+    ); 
 };
 export default CommentContainer;
