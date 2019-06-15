@@ -12,7 +12,9 @@ const igComment = <FontAwesomeIcon size="2x" icon={faComment} />;
 class PostContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      comments: this.state.igData.comments,
+    };
   }
 
   changeSubmit = e => {
@@ -32,30 +34,31 @@ class PostContainer extends React.Component {
   }
 
   render() {
+    console.log(this.state.comments);
     return (
       <div className="ig-post">
         <div className="ig-header">
           <img
             className="ig-post-thumbnail"
-            src={props.igData.thumbnailUrl}
-            alt={props.igData.username}
+            src={this.props.igData.thumbnailUrl}
+            alt={this.props.igData.username}
           />
-          <h2 className="ig-post-username">{props.igData.username}</h2>
+          <h2 className="ig-post-username">{this.props.igData.username}</h2>
         </div>
         <div className="ig-photo">
-          <img className="ig-photo" src={props.igData.imageUrl} alt="" />
+          <img className="ig-photo" src={this.props.igData.imageUrl} alt="" />
         </div>
         <div className="ig-interact-section">
           <div className="ig-interaction">
             <div className="far ig-heart">{igHeart}</div>
             <div className="far ig-comment">{igComment}</div>
           </div>
-          <div className="ig-likes">{props.igData.likes} likes</div>
+          <div className="ig-likes">{this.props.igData.likes} likes</div>
           <div className="ig-comments">
             <CommentContainer 
-                igData={props.igData}
-                commentChange={commentChange}
-                commentSubmit={commentSubmit}
+                igData={this.props.igData}
+                commentChange={this.commentChange}
+                commentSubmit={this.commentSubmit}
                 // commentValue={commentValue} 
             />
           </div>
