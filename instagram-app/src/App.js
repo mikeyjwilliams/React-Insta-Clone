@@ -16,12 +16,7 @@ class App extends React.Component {
   componentDidMount(prevProps) {
       this.setState({instagramData: dummyData})
   }
-
-  addNewComment = (e, index) => {
-    e.preventDefault();
-  }
-
-
+  
   render() {
     return (
       <div className="ig-layout">
