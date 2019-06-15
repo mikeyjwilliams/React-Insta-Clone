@@ -9,32 +9,60 @@ import './PostContainer.css';
 const igHeart = <FontAwesomeIcon size="2x" icon={faHeart} />;
 const igComment = <FontAwesomeIcon size="2x" icon={faComment} />;
 
-const PostContainer = props => {
-  return (
-    <div className="ig-post">
-      <div className="ig-header">
-        <img
-          className="ig-post-thumbnail"
-          src={props.igData.thumbnailUrl}
-          alt={props.igData.username}
-        />
-        <h2 className="ig-post-username">{props.igData.username}</h2>
-      </div>
-      <div className="ig-photo">
-        <img className="ig-photo" src={props.igData.imageUrl} alt="" />
-      </div>
-      <div className="ig-interact-section">
-        <div className="ig-interaction">
-          <div className="far ig-heart">{igHeart}</div>
-          <div className="far ig-comment">{igComment}</div>
+class PostContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  changeSubmit = e => {
+    e.preventDefault();
+    const text = e.target.value;
+    console.log(text);
+  
+    
+  
+  }
+  
+  commentValue = e => {
+    this.setState({
+      text: e.target.value
+    })
+    console.log(e.target.value);
+  }
+
+  render() {
+    return (
+      <div className="ig-post">
+        <div className="ig-header">
+          <img
+            className="ig-post-thumbnail"
+            src={props.igData.thumbnailUrl}
+            alt={props.igData.username}
+          />
+          <h2 className="ig-post-username">{props.igData.username}</h2>
         </div>
-        <div className="ig-likes">{props.igData.likes} likes</div>
-        <div className="ig-comments">
-          <CommentContainer igData={props.igData} />
+        <div className="ig-photo">
+          <img className="ig-photo" src={props.igData.imageUrl} alt="" />
+        </div>
+        <div className="ig-interact-section">
+          <div className="ig-interaction">
+            <div className="far ig-heart">{igHeart}</div>
+            <div className="far ig-comment">{igComment}</div>
+          </div>
+          <div className="ig-likes">{props.igData.likes} likes</div>
+          <div className="ig-comments">
+            <CommentContainer 
+                igData={props.igData}
+                commentChange={commentChange}
+                commentSubmit={commentSubmit}
+                // commentValue={commentValue} 
+            />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    ); 
+  } 
 };
 
 PostContainer.prototypes = {
