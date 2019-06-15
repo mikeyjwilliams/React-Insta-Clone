@@ -9,17 +9,35 @@ import NewComment from './NewComment';
 class CommentContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      text: ''
+    }
   }
+
+  commentSubmit = e => {
+    e.preventDefault();
+    const text = e.target.value;
+    console.log(text);
+  }
+  
+  commentValue = e => {
+    this.setState({
+      text: e.target.value
+    })
+    console.log(e.target.value);
+  }
+
+
   render() {
     return (
       <div>
-        {props.igData.comments.map(comment => {
+        {this.props.igData.comments.map(comment => {
           return <Comment key={comment.id} comment={comment} />;
         })}
         <NewComment 
-          commentSubmit={props.commentSubmit}
-          commentChange={props.commentChange}
-          commentValue={props.commentValue}
+          onSubmit={this.props.commentsubmit}
+          onChange={this.props.changecomment}
+          value={this.props.changevalue}
         />
       </div> 
     );
