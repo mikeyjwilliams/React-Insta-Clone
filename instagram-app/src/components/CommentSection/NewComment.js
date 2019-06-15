@@ -10,13 +10,13 @@ const NewComment = props => {
   
   return (
       <div className="new-comment">
-        <form commentsubmit={props.commentsubmit}>
+        <form onSubmit={props.addNewComment}>
           <input
             type="text"
             placeholder="Add a comment..."
             className="add-comment"
-            changexcomment={props.changecomment}
-            commentvalue={props.commentvalue}  
+            onChange={props.changeComment}
+            value={props.commentValue}  
           />
         </form>
         <div>{ellipsis}</div>
