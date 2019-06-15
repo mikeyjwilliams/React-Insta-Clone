@@ -4,6 +4,8 @@ import Comment from './Comment';
 import './Comment.css';
 import NewComment from './NewComment';
 
+
+
 const CommentContainer = props => {
   return (
     <div>
@@ -11,9 +13,9 @@ const CommentContainer = props => {
         return <Comment key={comment.id} comment={comment} />;
       })}
       <NewComment 
-        commentSubmit={props.igData.commentSubmit}
-        commentChange={props.igData.commentChange}
-        commentValue={props.igData.commentValue}
+        commentSubmit={props.commentSubmit}
+        commentChange={props.commentChange}
+        commentValue={props.commentValue}
       />
     </div> 
   );
