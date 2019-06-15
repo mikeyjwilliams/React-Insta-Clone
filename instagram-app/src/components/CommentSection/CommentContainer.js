@@ -6,18 +6,24 @@ import NewComment from './NewComment';
 
 
 
-const CommentContainer = props => {
-  return (
-    <div>
-      {props.igData.comments.map(comment => {
-        return <Comment key={comment.id} comment={comment} />;
-      })}
-      <NewComment 
-        commentSubmit={props.commentSubmit}
-        commentChange={props.commentChange}
-        commentValue={props.commentValue}
-      />
-    </div> 
-  );
+class CommentContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        {props.igData.comments.map(comment => {
+          return <Comment key={comment.id} comment={comment} />;
+        })}
+        <NewComment 
+          commentSubmit={props.commentSubmit}
+          commentChange={props.commentChange}
+          commentValue={props.commentValue}
+        />
+      </div> 
+    );
+  }
+  
 };
 export default CommentContainer;
