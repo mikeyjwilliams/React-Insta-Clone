@@ -1,0 +1,15 @@
+.ig-interaction {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .ig-heart {
+    margin-right: 10px;
+  }
+  
+  .ig-post {
+    width: 640px;
+    /* border: 1px solid slategray; */
+    margin: 0 auto;
+  }
+  
