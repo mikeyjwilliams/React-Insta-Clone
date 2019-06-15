@@ -10,8 +10,12 @@ const CommentContainer = props => {
       {props.igData.comments.map(comment => {
         return <Comment key={comment.id} comment={comment} />;
       })}
-      <NewComment />
-    </div>
+      <NewComment 
+        commentSubmit={props.commentSubmit}
+        commentChange={props.commentChange}
+        commentValue={props.commentValue}
+      />
+    </div> 
   );
 };
 export default CommentContainer;
