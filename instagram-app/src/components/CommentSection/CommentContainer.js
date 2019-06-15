@@ -11,9 +11,9 @@ const CommentContainer = props => {
         return <Comment key={comment.id} comment={comment} />;
       })}
       <NewComment 
-        commentSubmit={props.commentSubmit}
-        commentChange={props.commentChange}
-        commentValue={props.commentValue}
+        commentSubmit={props.igData.commentSubmit}
+        commentChange={props.igData.commentChange}
+        commentValue={props.igData.commentValue}
       />
     </div> 
   );
