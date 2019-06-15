@@ -9,18 +9,27 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      instagramData: dummyData
+      instagramData: [],
     };
   }
+
+  componentDidMount(prevProps) {
+      this.setState({instagramData: dummyData})
+  }
+
+  addNewComment = (e, index) => {
+    e.preventDefault();
+  }
+
 
   render() {
     return (
       <div className="ig-layout">
         <SearchBar />
-        {this.state.instagramData.map(igData => {
+        {this.state.instagramData.map( (igData) => {
           return <PostContainer 
             key={igData.id} 
-            igData={igData} 
+            igData={igData}
         />;
         })}
       </div>
