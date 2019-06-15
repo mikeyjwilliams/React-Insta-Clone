@@ -2,7 +2,7 @@ import React from 'react';
 
 import Comment from './Comment';
 import './Comment.css';
-import NewComment from './NewComment';
+import NewComment from './NewComment'; 
 
 
 
@@ -10,9 +10,12 @@ class CommentContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      comments: props.igData.comments,
+      comment: ''
     }
   }
+
+  
 
   commentSubmit = e => {
     e.preventDefault();
@@ -27,7 +30,7 @@ class CommentContainer extends React.Component {
     console.log(e.target.value);
   }
 
-
+  
   render() {
     return (
       <div>
@@ -35,9 +38,9 @@ class CommentContainer extends React.Component {
           return <Comment key={comment.id} comment={comment} />;
         })}
         <NewComment 
-          onSubmit={this.props.commentsubmit}
-          onChange={this.props.changecomment}
-          value={this.props.changevalue}
+          addNewComment={this.props.addNewComment}
+          changeComment={this.props.changeComment}
+          commentValue={this.props.commentvalue}
         />
       </div> 
     );
