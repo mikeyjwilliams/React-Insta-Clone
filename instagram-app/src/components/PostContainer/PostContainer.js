@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import CommentContainer from '../CommentSection/CommentContainer';
+import PostHeader from '../../PostHeader/PostHeader';
 import LikesSection from './LikesSection/LikesSection';
 import './PostContainer.css';
 
@@ -31,19 +32,14 @@ class PostContainer extends React.Component {
   render() {
     return (
       <div className="ig-post">
-        <div className="ig-header">
-          <img
-            className="ig-post-thumbnail"
-            src={this.props.instagramData.thumbnailUrl}
-            alt={this.props.instagramData.username}
-          />
-          <h2 className="ig-post-username">{this.props.instagramData.username}</h2>
-        </div>
+        <PostHeader instagramData={this.props.instagramData} />
         <div className="ig-photo">
           <img className="ig-photo" src={this.props.instagramData.imageUrl} alt="" />
         </div>
         <div className="ig-interact-section">
-         <LikesSection instagramData={this.props.instagramData}/>
+         <LikesSection 
+            instagramData={this.props.instagramData}
+          />
           <div className="ig-comments">
             <CommentContainer 
                 instagramComments={this.state.instagramComments}
