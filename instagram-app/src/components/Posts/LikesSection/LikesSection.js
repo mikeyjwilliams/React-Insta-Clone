@@ -7,7 +7,7 @@ const LikesSection = props => {
     return(
         <div>
             <div className="ig-likes-section">
-
+                
                 <div className="far ig-heart"><FontAwesomeIcon className="far" icon="heart" /></div>
                 <div className="far ig-comment"><FontAwesomeIcon icon="comment" /></div>
             </div>
