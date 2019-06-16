@@ -14,7 +14,7 @@ const LikesSection = props => {
                 <div className="far ig-heart">{igHeart}</div>
                 <div className="far ig-comment">{igComment}</div>
             </div>
-            <div className="ig-likes">{props.igData.likes} likes</div>
+            <div className="ig-likes">{props.instagramData.likes} likes</div>
         </div>
         
     );
