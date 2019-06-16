@@ -3,3 +3,7 @@
   justify-content: space-around;
   flex-direction: column;
 }
+
+.loading-center {
+  margin: 0 auto;
+}
