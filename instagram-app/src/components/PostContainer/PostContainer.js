@@ -11,11 +11,31 @@ class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      instagramComments: props.igData.comments
+      instagramComments: props.igData.comments,
+      comment: ''
     }
   }
+
+  
+
+  addCommentHandler = e => {
+    e.preventDefault();
+    const target = e.target.value;
+    console.log(target);
+    
+  }
+  
+  commentValue = e => {
+    console.log(e.target.value);
+    this.setState({
+      comment: e.target.value
+    })
+    console.log(this.state.comment);
+  }
+
+
   render() {
-    console.log(this.state.instagramComments);
+    console.log(this.text);
     return (
       <div className="ig-post">
         <div className="ig-header">
@@ -33,10 +53,11 @@ class PostContainer extends React.Component {
          <LikesSection igData={this.props.igData}/>
           <div className="ig-comments">
             <CommentContainer 
-                igData={this.props.igData}
-                addNewComment={this.props.addNewComment}
-                changeComment={this.props.changeComment}
-                commentValue={this.props.commentValue}
+                comments={this.props.igData.comments}
+
+                addCommentHandler={this.addCommentHandler}
+                commentChange={this.commentChange}
+                commentValue={this.commentValue}
             />
           </div>
         </div>
