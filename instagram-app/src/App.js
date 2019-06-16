@@ -5,6 +5,11 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faComment, faHeart);
+
 class App extends React.Component {
   constructor() {
     super();
@@ -12,6 +17,7 @@ class App extends React.Component {
       instagramData: [],
     };
   }
+
 
   componentDidMount(prevProps) {
       this.setState({instagramData: dummyData})
