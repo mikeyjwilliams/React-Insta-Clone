@@ -12,7 +12,7 @@ class PostContainer extends React.Component {
     super(props);
     this.state = {
       instagramComments: props.igData.comments,
-      comment: ''
+      text: ''
     }
   }
 
@@ -20,22 +20,24 @@ class PostContainer extends React.Component {
 
   addCommentHandler = e => {
     e.preventDefault();
-    const target = e.target.value;
-    console.log(target);
+    const newComment = {text: this.state.text, username: 'Developer'};
+    const comments = this.state.instagramComments.slice();
+    comments.push(newComment);
+    this.setState({ instagramComments: comments});
+    this.setState({text: this.state.text});
     
   }
   
-  commentValue = e => {
-    console.log(e.target.value);
+  commentChange = e => {
     this.setState({
-      comment: e.target.value
+      text: e.target.value
     })
-    console.log(this.state.comment);
+    console.log(e.target.value);
   }
 
 
   render() {
-    console.log(this.text);
+    console.log(this.state.instagramComments);
     return (
       <div className="ig-post">
         <div className="ig-header">
