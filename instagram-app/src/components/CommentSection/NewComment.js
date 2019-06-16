@@ -10,12 +10,12 @@ const NewComment = props => {
   
   return (
       <div className="new-comment">
-        <form onSubmit={props.addNewComment}>
+        <form onSubmit={props.addCommentHandler}>
           <input
             type="text"
             placeholder="Add a comment..."
             className="add-comment"
-            onChange={props.changeComment}
+            onChange={props.commentChange}
             value={props.commentValue}  
           />
         </form>
