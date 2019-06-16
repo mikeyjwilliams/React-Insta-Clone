@@ -5,17 +5,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/Posts/PostContainer';
 import './App.css';
 
-// import {
-//   IconLookup,
-//   IconDefinition,
-//   findIconDefinition
-// } from '@fortawesome/fontawesome-svg-core'
- 
-
-//import { library } from '@fortawesome/fontawesome-svg-core';
-// import {faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
-
-// library.add(faComment, faHeart);
 
 class App extends React.Component {
   constructor() {
@@ -43,7 +32,7 @@ class App extends React.Component {
               }
             )
           
-        : <h1>Loading...</h1>
+        : <h1 className="loading-center">Loading...</h1>
         }
       </div>
     );
