@@ -18,4 +18,9 @@ Comment.prototypes = {
   })
 };
 
+Comment.prototype = {
+  username: PropTypes.string,
+  text: PropTypes.string
+}
+
 export default Comment;
