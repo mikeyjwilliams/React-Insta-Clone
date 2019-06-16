@@ -11,7 +11,9 @@ class PostContainer extends React.Component {
     super(props);
     this.state = {
       instagramComments: props.instagramData.comments,
-      text: ''
+      text: '',
+      likes: props.instagramData.likes
+
     }
   }
   
