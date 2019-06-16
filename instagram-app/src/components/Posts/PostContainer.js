@@ -31,6 +31,10 @@ class PostContainer extends React.Component {
     })
   }
 
+  heartLikesHandler = e => {
+
+  }
+
   render() {
     return (
       <div className="ig-post">
@@ -41,6 +45,7 @@ class PostContainer extends React.Component {
         <div className="ig-interact-section">
          <LikesSection 
             instagramData={this.props.instagramData}
+            heartLikes={this.heartLikesHandler}
           />
           <div className="ig-comments">
             <CommentContainer 
