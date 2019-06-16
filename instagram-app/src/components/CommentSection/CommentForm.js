@@ -6,7 +6,7 @@ import './Comment.css';
 
 const ellipsis = <FontAwesomeIcon icon={faEllipsisH} size="2x" />; // elleipsis on end of comment section
 
-const NewComment = props => {
+const CommentForm = props => {
   
   return (
       <div className="new-comment">
@@ -23,4 +23,4 @@ const NewComment = props => {
       </div>
     );
   };
-export default NewComment;
+export default CommentForm;
