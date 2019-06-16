@@ -6,10 +6,10 @@ const PostHeader = props => {
         <div className="ig-header">
           <img
             className="ig-post-thumbnail"
-            src={this.props.instagramData.thumbnailUrl}
-            alt={this.props.instagramData.username}
+            src={props.instagramData.thumbnailUrl}
+            alt={props.instagramData.username}
           />
-          <h2 className="ig-post-username">{this.props.instagramData.username}</h2>
+          <h2 className="ig-post-username">{props.instagramData.username}</h2>
         </div>
     );
 }
