@@ -2,7 +2,7 @@ import React from 'react';
 
 import Comment from './Comment';
 import './Comment.css';
-import NewComment from './NewComment'; 
+import CommentForm from './CommentForm'; 
 
 
 const  CommentContainer = props => {
@@ -11,7 +11,7 @@ const  CommentContainer = props => {
         {props.comments.map(comment => {
           return <Comment key={comment.id} comment={comment} />;
         })}
-        <NewComment 
+        <CommentForm 
           addCommentHandler={props.addCommentHandler}
           commentChange={props.commentChange}
           commentvalue={props.commentValue}
