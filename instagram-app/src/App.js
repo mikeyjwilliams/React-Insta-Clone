@@ -21,10 +21,10 @@ class App extends React.Component {
     return (
       <div className="ig-layout">
         <SearchBar />
-        {this.state.instagramData.map( (igData) => {
+        {this.state.instagramData.map( (instagramData) => {
           return <PostContainer 
-            key={igData.id} 
-            igData={igData}
+            key={instagramData.id} 
+            instagramData={instagramData}
         />;
         })}
       </div>
