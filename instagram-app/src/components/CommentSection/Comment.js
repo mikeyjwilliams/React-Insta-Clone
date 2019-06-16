@@ -17,10 +17,4 @@ Comment.prototypes = {
     text: PropTypes.string
   })
 };
-
-Comment.prototype = {
-  username: PropTypes.string,
-  text: PropTypes.string
-}
-
 export default Comment;
