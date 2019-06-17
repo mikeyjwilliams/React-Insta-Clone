@@ -1,5 +1,6 @@
 import React from 'react';
 import './Post.css';
+// goes in the PostHeader Component
 
 const PostHeader = props => {
   return (

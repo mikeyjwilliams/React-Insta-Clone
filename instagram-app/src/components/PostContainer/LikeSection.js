@@ -1,4 +1,5 @@
 import React from 'react';
+// comes from the POST component.
 
 const LikeSection = props => {
   return (
