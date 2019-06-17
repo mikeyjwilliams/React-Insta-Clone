@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Post.css';
 
 const Post = props => {
@@ -19,8 +20,19 @@ const Post = props => {
                         {props.instagram.username}
                     </span>
             </div>
+            <div className="ig-image">
+                <img src={props.instagram.imageUrl} alt="" />
+            </div>
         </div>
     );
+}
+
+Post.prototypes = {
+    instagram: PropTypes.shape({
+        thumbnailUrl: PropTypes.string,
+        username: PropTypes.string,
+        imageUrl: PropTypes.string
+    })
 }
 
 export default Post;
