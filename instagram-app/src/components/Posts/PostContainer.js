@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import CommentContainer from '../CommentSection/CommentContainer';
 import PostHeader from '../../PostHeader/PostHeader';
-import LikesSection from './LikesSection/LikesSection';
+import LikesSection from '../LikesSection/LikesSection';
 import './PostContainer.css';
 
 class PostContainer extends React.Component {
@@ -12,54 +12,57 @@ class PostContainer extends React.Component {
     this.state = {
       instagramComments: props.instagramData.comments,
       text: '',
-      likes: props.instagramData.likes
-
-    }
+      likes: props.instagramData.likes,
+    };
   }
-  
+
   addCommentHandler = e => {
     e.preventDefault();
-    const newComment = {username: 'Developer', text: this.state.text}; // set name for now.
+    const newComment = { username: 'Developer', text: this.state.text }; // set name for now.
     const comments = this.state.instagramComments.slice(); // turning state of comments into an array.
     comments.push(newComment); // push new comment onto end of comment section.
-    this.setState({ instagramComments: comments});
-  }
-  
+    this.setState({ instagramComments: comments });
+  };
+
   commentChange = e => {
     this.setState({
-      text: e.target.value
-    })
-  }
+      text: e.target.value,
+    });
+  };
 
   likeIncrease = e => {
     console.log(e.target + 1);
-  }
+  };
 
   render() {
     return (
-      <div className="ig-post">
+      <div className='ig-post'>
         <PostHeader instagramData={this.props.instagramData} />
-        <div className="ig-photo">
-          <img className="ig-photo" src={this.props.instagramData.imageUrl} alt="" />
+        <div className='ig-photo'>
+          <img
+            className='ig-photo'
+            src={this.props.instagramData.imageUrl}
+            alt=''
+          />
         </div>
-        <div className="ig-interact-section">
-         <LikesSection 
+        <div className='ig-interact-section'>
+          <LikesSection
             instagramData={this.props.instagramData}
             heartLikes={this.heartLikesHandler}
           />
-          <div className="ig-comments">
-            <CommentContainer 
-                instagramComments={this.state.instagramComments}
-                addCommentHandler={this.addCommentHandler}
-                commentChange={this.commentChange}
-                commentValue={this.commentValue}
+          <div className='ig-comments'>
+            <CommentContainer
+              instagramComments={this.state.instagramComments}
+              addCommentHandler={this.addCommentHandler}
+              commentChange={this.commentChange}
+              commentValue={this.commentValue}
             />
           </div>
         </div>
       </div>
-    ); 
-  }  
-};
+    );
+  }
+}
 
 PostContainer.prototypes = {
   igData: PropTypes.shape({
@@ -68,7 +71,7 @@ PostContainer.prototypes = {
     thumbnailUrl: PropTypes.string,
     imageUrl: PropTypes.string,
     likes: PropTypes.number,
-    comments: PropTypes.arrayOf(PropTypes.object)
-  })
+    comments: PropTypes.arrayOf(PropTypes.object),
+  }),
 };
 export default PostContainer;
