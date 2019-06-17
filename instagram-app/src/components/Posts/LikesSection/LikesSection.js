@@ -13,10 +13,14 @@ const LikesSection = props => {
         <div>
             <div className="ig-likes-section">
                 
-                <div onClick={props.heartLikesHandler} 
-                     className="far ig-heart">
+                <button 
+                    type="button" 
+                    className="far ig-heart" 
+                    key="ig-heart-icon-wrapper"
+                    onClick={props.likeIncrease}
+                >
                         {heartIcon}
-                </div>
+                </button>
                 <div 
                     className="far ig-comment">
                         {commentIcon}
