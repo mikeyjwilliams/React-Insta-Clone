@@ -17,7 +17,7 @@ const LikesSection = props => {
                     type="button" 
                     className="far ig-heart" 
                     key="ig-heart-icon-wrapper"
-                    onClick={props.likeIncrease}
+                    onClick={props.likeIncreaseHandler}
                 >
                         {heartIcon}
                 </button>
