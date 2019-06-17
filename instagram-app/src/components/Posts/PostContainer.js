@@ -30,8 +30,9 @@ class PostContainer extends React.Component {
     });
   };
 
-  likeIncrease = e => {
-    console.log(e.target + 1);
+  increaseLikes = () => {
+    let likes = this.state.likes + 1;
+    this.setState({ likes });
   };
 
   render() {
@@ -47,8 +48,8 @@ class PostContainer extends React.Component {
         </div>
         <div className='ig-interact-section'>
           <LikesSection
-            instagramData={this.props.instagramData}
-            heartLikes={this.heartLikesHandler}
+            likes={this.state.likes}
+            increaseLikes={this.increaseLikes}
           />
           <div className='ig-comments'>
             <CommentContainer
