@@ -5,6 +5,8 @@
   
   .ig-heart {
     margin-right: 10px;
+    background-color: inherit;
+    border: none;
   }
   
   .ig-post {
