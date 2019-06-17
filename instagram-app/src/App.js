@@ -12,15 +12,22 @@ class App extends React.Component {
     };
   }
 
-
-  componentDidMount() {
-      this.setState({instagramData: dummyData})
+  componetDidMount() {
+    this.SetState({
+      instagramData: this.state.dummyData
+    })
   }
   
   render() {
     return (
       <div className="ig-layout">
-      <h1>hello</h1>
+        {this.state.instagramData.map( (instagramData, index) => {
+          return <CommentSection 
+                    key={index}
+                    instagramData={this.state.instagramData}
+                />
+          })
+      }
       </div>
     );
   }
