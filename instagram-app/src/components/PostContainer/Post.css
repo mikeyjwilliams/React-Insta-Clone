@@ -1,16 +1,19 @@
-
 .ig-post {
-    max-width: 640px;
-    margin: 1.5rem auto 0;
-    border: 1px solid rgba(219, 219, 219, 0.8);
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  border: 1px solid rgba(219, 219, 219, 0.8);
 }
 
 .ig-header {
-    padding: 15px;
+  padding: 15px;
 }
 
 .ig-thumbnail {
-    border-radius: 50%;
-    width: 5%;
-    margin-right: 10px;
+  border-radius: 50%;
+  width: 5%;
+  margin-right: 10px;
+}
+
+.ig-comment-section {
+  margin-bottom: 10px;
 }
