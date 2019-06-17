@@ -9,10 +9,9 @@ import './Posts.css';
 class Post extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      likes: props.instagramdata.likes,
-    };
+    this.state = {};
   }
+
   render() {
     return (
       <div class='border'>
@@ -28,8 +27,8 @@ class Post extends React.Component {
           />
         </div>
         <LikeSection
-          increaseLikes={this.increaseLikes}
-          likes={this.state.likes}
+          increaseLikes={this.props.increaseLikes}
+          likes={this.props.instagramData.likes}
         />
         <CommentSection
           postId={this.props.instagramdata.imageUrl}
