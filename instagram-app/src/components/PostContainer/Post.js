@@ -14,6 +14,10 @@ const Post = props => {
                             className="ig-thumbnail"
                         />
                 </span>
+                <span
+                    className="ig-user">
+                        {props.instagram.username}
+                    </span>
             </div>
         </div>
     );
