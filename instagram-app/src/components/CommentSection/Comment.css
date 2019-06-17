@@ -1,0 +1,9 @@
+.comment-form {
+  padding-top: 25px;
+  border-top: 1px solid rgba(236, 236, 236, 0.9);
+}
+
+.ig-comment-input {
+  width: 90%;
+  margin-top: 30px;
+}
