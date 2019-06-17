@@ -4,7 +4,7 @@ import './Comments.css';
 const CommentSection = props => {
     console.log('props.instagramData ', props.instagram);
     return (
-        <div className="ig-post">
+        <div className="ig-comments">
             
         </div>
     );
