@@ -5,16 +5,24 @@ import CommentContainer from '../CommentSection/CommentContainer';
 import PostHeader from '../../PostHeader/PostHeader';
 import LikesSection from './LikesSection/LikesSection';
 import './PostContainer.css';
+import dummyData from '../../dummy-data';
 
 class PostContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      instagramComments: props.instagramData.comments,
-      text: '',
-      likes: props.instagramData.likes
+     this.state = {
+       instagramComments: [],
+    //   text: '',
+    //   likes: props.instagramData.likes,
+    //   like: 0,
 
     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      instagramComments: dummyData
+    })
   }
   
   addCommentHandler = e => {
@@ -32,30 +40,12 @@ class PostContainer extends React.Component {
   }
 
   likeIncrease = e => {
-    console.log(e.target + 1);
+    console.log(e.target.value);
   }
-
   render() {
     return (
-      <div className="ig-post">
-        <PostHeader instagramData={this.props.instagramData} />
-        <div className="ig-photo">
-          <img className="ig-photo" src={this.props.instagramData.imageUrl} alt="" />
-        </div>
-        <div className="ig-interact-section">
-         <LikesSection 
-            instagramData={this.props.instagramData}
-            heartLikes={this.heartLikesHandler}
-          />
-          <div className="ig-comments">
-            <CommentContainer 
-                instagramComments={this.state.instagramComments}
-                addCommentHandler={this.addCommentHandler}
-                commentChange={this.commentChange}
-                commentValue={this.commentValue}
-            />
-          </div>
-        </div>
+      <div>
+
       </div>
     ); 
   }  
