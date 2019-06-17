@@ -1,6 +1,7 @@
 import React from 'react';
 
 import dummyData from './dummy-data';
+import CommentSection from './components/CommentSection/CommentSection';
 import './App.css';
 
 
@@ -12,19 +13,20 @@ class App extends React.Component {
     };
   }
 
-  componetDidMount() {
-    this.SetState({
-      instagramData: this.state.dummyData
-    })
+  componentDidMount() {
+      this.setState({
+        instagramData: dummyData
+      });
   }
   
   render() {
+    console.log(this.state.instagramData);
     return (
       <div className="ig-layout">
-        {this.state.instagramData.map( (instagramData, index) => {
-          return <CommentSection 
+        {this.state.instagramData.map( (instagram, index) => {
+           return <CommentSection 
                     key={index}
-                    instagramData={this.state.instagramData}
+                    instagram={instagram}
                 />
           })
       }
