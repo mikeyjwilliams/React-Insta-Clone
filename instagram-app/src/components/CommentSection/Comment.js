@@ -10,7 +10,7 @@ const Comment = props => {
       {/* <LikeContainer /> */}
       <div className="user-comments">
         <span className="ig-user">{props.comment.username}</span>
-        <span className="comment-text">{props.comment.text}</span>
+        <span className="ig-comment-text">{props.comment.text}</span>
       </div>
     </div>
   );
