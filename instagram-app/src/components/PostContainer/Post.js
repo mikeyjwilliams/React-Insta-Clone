@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from '../CommentSection/Comment';
 import './Post.css';
+import CommentForm from '../CommentSection/CommentForm';
 
 const Post = props => {
   console.log('POST DATA', props.instagram);
@@ -20,9 +21,12 @@ const Post = props => {
       <div className="ig-image">
         <img src={props.instagram.imageUrl} alt="" />
       </div>
-      {props.instagram.comments.map((comment, i) => {
-        return <Comment key={i} comment={comment} />;
-      })}
+      <div class="ig-comment-section">
+        {props.instagram.comments.map((comment, i) => {
+          return <Comment key={i} comment={comment} />;
+        })}
+      </div>
+      <CommentForm />
     </div>
   );
 };
