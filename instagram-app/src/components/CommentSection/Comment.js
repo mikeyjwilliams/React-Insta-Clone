@@ -2,6 +2,7 @@ import React from 'react';
 
 //import Post from '../PostContainer/Post';
 import './Comment.css';
+import { PropTypes } from 'prop-types';
 
 const Comment = props => {
   console.log('props.COMMENTS ', props.comment);
@@ -15,4 +16,10 @@ const Comment = props => {
     </div>
   );
 };
+
+Comment.propTypes = {
+  username: PropTypes.string,
+  text: PropTypes.string
+};
+
 export default Comment;

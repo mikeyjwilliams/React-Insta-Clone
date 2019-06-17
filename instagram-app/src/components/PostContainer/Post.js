@@ -31,7 +31,7 @@ const Post = props => {
   );
 };
 
-Post.prototypes = {
+Post.propTypes = {
   instagram: PropTypes.shape({
     thumbnailUrl: PropTypes.string,
     username: PropTypes.string,
