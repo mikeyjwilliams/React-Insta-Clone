@@ -7,3 +7,9 @@
 .loading-center {
   margin: 0 auto;
 }
+
+/**** USE ON ALL USER NAMES ***/
+.ig-user {
+  font-weight: 700;
+  margin-right: 7px;
+}
