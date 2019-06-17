@@ -1,7 +1,7 @@
 import React from 'react';
 
 import dummyData from './dummy-data';
-import CommentSection from './components/CommentSection/CommentSection';
+import Post from './components/PostContainer/Post';
 import './App.css';
 
 
@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <div className="ig-layout">
         {this.state.instagramData.map( (instagram, index) => {
-           return <CommentSection 
+           return <Post 
                     key={index}
                     instagram={instagram}
                 />
