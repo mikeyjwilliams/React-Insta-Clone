@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Post from '../PostContainer/Post';
-import './Comments.css';
+import './Comment.css';
 
-const CommentSection = props => {
+const Comment = props => {
     console.log('props.instagramData ', props.instagram);
     return (
         <div className="ig-comments">
@@ -11,4 +11,4 @@ const CommentSection = props => {
         </div>
     );
 }
-export default CommentSection;
+export default Comment;
