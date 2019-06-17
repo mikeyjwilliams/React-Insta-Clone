@@ -9,7 +9,7 @@ const commentIcon = <FontAwesomeIcon icon={faComment} size="2x" />
 
 
 const LikesSection = props => {
-    return(
+    return (
         <div>
             <div className="ig-likes-section">
                 
@@ -17,7 +17,7 @@ const LikesSection = props => {
                     type="button" 
                     className="far ig-heart" 
                     key="ig-heart-icon-wrapper"
-                    onClick={props.likeIncreaseHandler}
+                    onClick={props.heartLikesHandler}
                 >
                         {heartIcon}
                 </button>
@@ -28,10 +28,14 @@ const LikesSection = props => {
             </div>
             <div 
                 className="ig-likes">
-                    {props.instagramData.likes} likes
+                    
+                   <span 
+                        className="ig-increasing-likes"
+                    >
+                        {props.likes}
+                    </span> likes
             </div>
-        </div>
-        
+        </div> 
     );
 };
 export default LikesSection;
