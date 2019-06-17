@@ -31,8 +31,8 @@ class PostContainer extends React.Component {
     })
   }
 
-  heartLikesHandler = e => {
-
+  likeIncrease = e => {
+    console.log(e.target + 1);
   }
 
   render() {
