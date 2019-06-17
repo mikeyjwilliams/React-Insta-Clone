@@ -12,7 +12,7 @@ class PostContainer extends React.Component {
     this.state = {
       instagramComments: props.instagramData.comments,
       text: '',
-      likes: props.instagramData.comments.likes
+      likes: props.instagramData.likes
 
     }
   }
@@ -32,7 +32,7 @@ class PostContainer extends React.Component {
   }
 
   likeIncrease = e => {
-    console.log(e.target.value);
+    console.log(e.target + 1);
   }
 
   render() {
