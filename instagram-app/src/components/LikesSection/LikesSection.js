@@ -1,10 +1,6 @@
 import React from 'react';
 import './LikesSection.css';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
-
-const commentIcon = <FontAwesomeIcon icon={faComment} size='2x' />;
+import { PropTypes } from 'prop-types';
 
 const LikesSection = props => {
   return (
@@ -18,7 +14,9 @@ const LikesSection = props => {
         >
           <i className='far fa-heart fa-2x' />
         </button>
-        <div className='far ig-comment'>{commentIcon}</div>
+        <div className='far ig-comment'>
+          <i class='far fa-comment fa-2x' />
+        </div>
       </div>
       <div className='ig-likes' key='likes-container'>
         <span className='ig-increasing-likes'>{props.likes}</span> likes
