@@ -13,7 +13,12 @@ const SearchBar = props => {
           <h1 className='instagram-logo icon'>Instagram</h1>
         </div>
       </div>
-      <input type='text' placeholder='Search...' className='input-search' />
+      <input
+        type='text'
+        placeholder='Search...'
+        className='input-search'
+        onChange={props.searchBar}
+      />
       <div className='user-icons'>
         <div className='compass-icon icon'>
           <i class='far fa-compass fa-2x' />
