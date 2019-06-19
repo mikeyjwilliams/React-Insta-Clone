@@ -18,9 +18,9 @@ class PostContainer extends React.Component {
 
   addCommentHandler = e => {
     e.preventDefault();
-    const newComment = { username: 'Developer', text: this.state.text }; // set name for now.
-    const comments = this.state.instagramComments.slice(); // turning state of comments into an array.
-    comments.push(newComment); // push new comment onto end of comment section.
+    const newComment = { username: 'Developer', text: this.state.text }; // set name for now. >:(
+    const comments = this.state.instagramComments.slice(); // turning state of comments into an array. >:(
+    comments.push(newComment); // push new comment onto end of comment section. >:/
     this.setState({ instagramComments: comments });
   };
 
